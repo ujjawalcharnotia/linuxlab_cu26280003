@@ -1,0 +1,81 @@
+361  cd Linux_labsheet
+  362  cd lab3
+  363  pwd
+  364  mkdir -p data backups logs output
+  365  touch data/names.txt data/students.txt data/notes.txt
+  366  printf 'zara\nAmit\nNeha\nRavi\nAmit\n' > data/names.txt
+  367  printf '101,Amit,85\n102,Neha,92\n103,Ravi,68\n104,zara,76\n' > data/students.txt
+  368  printf 'Linux Shell scripting\nVariables and loops\nPipes and redirection\n' > data/notes.txt
+  369  touch backups/db_01.bak backups/db_02.bak
+  370  find . -maxdepth 2 -type f -print
+  371  nano hello.sh
+  372  chmod +x hello.sh
+  373  ./hello.sh
+  374  bash hello.sh
+  375  nano user_input.sh
+  376  chmod +x user_input.sh
+  377  ./user_input.sh
+  378  nano calculator.sh
+  379  chmod +x calculator.sh
+  380  ./calculator.sh
+  381  nano system_info.sh
+  382  chmod +x system_info.sh
+  383  ./system_info.sh
+  384  nano number_type.sh
+  385  chmod +x number_type.sh
+  386  ./number_type.sh
+  387  nano even_odd.sh
+  388  cd ..
+  389  cd ~/Linux_labsheet/lab3
+  390  ls
+  391  cat > user_input.sh
+  392  rm user_input.sh
+  393  cat > user_input.sh
+  394  for file in data/*; do echo "===== $file =====" cat "$file" echo done
+  395  ls data
+  396  cat data/names.txt
+  397  cat data/students.txt
+  398  cat data/notes.txt
+  399  ls *.sh
+  400  cat *.sh
+  401  nano file_check.sh
+  402  chmod +x file_check.sh
+  403  ./file_check.sh
+  404  ./file_check.sh data/names.txt
+  405  nano multiplication.sh
+  406  chmod +x multiplication.sh
+  407  ./multiplication.sh 5
+  408  nano list_txt.sh
+  409  chmod +x list_txt.sh
+  410  ./list_txt.sh
+  411  nano countdown.sh
+  412  chmod +x countdown.sh
+  413  ./countdown.sh
+  414  nano arguements.sh
+  415  chmod +x arguements.sh
+  416  ./arguements.sh apple mango
+  417  nano status.sh
+  418  chmod +x status.sh
+  419  ./status.sh data echo $?
+  420  ./status.sh abc echo $?
+  421  ls data > output/files.txt
+  422  cat output/files.txt
+  423  echo "First line" > output/files.txt
+  424  cat output/files.txt
+  425  echo " second line" >> output/files.txt
+  426  cat output/files.txt
+  427  nano log_entry.sh
+  428  chmod +x log_entry.sh
+  429  ./log_entry.sh
+  430  cat logs/activity.log
+  431  sort < data/names.txt
+  432  sort -u < data/names.txt
+  433  ls wrong_file 2> logs/errors.log
+  434  cat logs/errors.log
+  435  ls data wrong_folder > logs/combined.log 2>&1
+  436  cat logs/combined.log
+  437  ps aux
+  438  pas aux | grep bash
+  439  ps aux | grep bash
+  440  ps aux | grep bash | wc -l
+  441  history
