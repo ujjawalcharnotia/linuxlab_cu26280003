@@ -1,0 +1,56 @@
+mkdr "linux_labsheet"
+	 mkdir "Linux_labsheet"
+	 pwd
+	 cd "Linux_labsheet"
+	 mkdir lab1 lab2 lab3
+	 ls
+	 cd lab1
+	 pwd
+	 ls
+	 ls -la ~
+	 ls -lah
+	 mkdir myfirstlab
+	 cd myfirstlab
+	 touch a.txt b.txt c.txt
+	 cat /etc/os-release
+	 whoami
+	 hostname
+	 df -h
+	 free -h
+	 uptime
+	 uname -a
+	 man ls
+	 cp --help
+	 whatis mv
+	 cd ~
+	 mkdir -p project/src/data
+	 rm ~/myfirstlab/
+	 echo "Riya">students.txt
+	 echo "neha">>students.txt
+	 echo "pooja">>students.txt
+	 echo "anjali">>students.txt
+	 echo "simran">>students.txt
+	 cat students.txt
+	 head -n 2 students.txt
+	 tail -n 2 students.txt
+	 mkdir backup
+	 cp students.txt backup/
+	 mv students.txt class_list.txt
+	 grep "a" class_list.txt
+	 grep -n "a" class_list.txt
+	 chmod 600 class_list.txt
+	 ls -l class_list.txt
+	 find ~ -type f -name "*.txt"
+	 wc -l class_list.txt
+	 head -n 5 /etc/passwd
+	 tail -n 5  /var/log/dpkg.log
+	 cp -r project project_backup
+	 less filename.txt
+	 less class_list.txt
+	 mv a.txt b.txt archive/
+	 mkdir logs && cd logs && for i in {1..10}; do echo "line $i" >> app.log;  done && tail -n 3 app.log
+	 find . -name "*.log" -exec cat {} \;
+	 grep -r "error" .
+	 echo "# rwxr-xr--permission example" > test.sh && chmod u+x test.sh
+	 cd ../Linux_labsheet
+	 ls
