@@ -1,0 +1,83 @@
+80  cd lab2
+   81  touch notes.txt
+   82  ls -l notes.txt
+   83  chmod 644 notes.txt
+   84  ls -l notes.txt
+   85  chmod 600 notes.txt
+   86  ls -l notes.txt
+   87  touch script.sh
+   88  chmod u+x script.sh
+   89  ls -l script.sh
+   90  whoami
+   91  ls -l notes.txt
+   92  ps
+   93  ps aux | wc -l
+   94  sleep 60 &
+   95  jobs
+   96  ps
+   97  kill PID
+   98  kill 12172
+   99  apt search tree
+  100  umask
+  101  touch document.txt
+  102  chmod g-w document.txt
+  103  ls -l document.txt
+  104  fg %1
+  105  sleep 100 &
+  106  jobs
+  107  fg %1
+  108  bg %1
+  109  jobs
+  110  uname -a
+  111  pwd
+  112  ls -la
+  113  file notes.txt
+  114  ls -lh notes.txt
+  115  id
+  116  chmod 754 script.sh
+  117  ls -l script.sh
+  118  id student
+  119  sudo useradd student
+  120  sudo groupadd student
+  121  touch test.txt
+  122  sudo chown student:student text.txt
+  123  sudo chown student:student notes.txt
+  124  ls -l notes.txt
+  125  top
+  126  sleep 100 &
+  127  sleep 200 &
+  128  fg %1
+  129  df -h
+  130  du -sh
+  131  free -h
+  132  date
+  133  uptime
+  134  who
+  135  whoami
+  136  last
+  137  which last
+  138  last
+  139  sudo apt install util-linux
+  140  which last
+  141  last
+  142  echo $$
+  143  nano script.sh
+  144  chmod +x script.sh
+  145  ./script.sh
+  146  touch shared.txt
+  147  chmod 640 shared.txt
+  148  ls -l shared.txt
+  149  nic -n 15 sleep 300 &
+  150  ps -o pid,ni,cmd
+  151  ps -o pid,nic,cmd
+  152  ps -ef | grep "sleep 300"
+  153  ps -p 13444,11899 -o pid,ni,cmd
+  154  renice 5 -p 11899
+  155  sudo apt update
+  156  sudo apt install apache2
+  157  sudo systemct1 status apache2
+  158  sudo systemctl status apache2
+  159  sudo systemctl stop apache2
+  160  sudo systemctl status apache2
+  161  sudo systemctl restart apache2
+  162  sudo systemctl status apache2
