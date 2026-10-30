@@ -1,0 +1,31 @@
+lsblk
+lsblk -f
+sudo blkid
+sudo fdisk -l
+sudo mkfs.ext4 /dev/sdX1
+sudo blkid /dev/sdX1
+sudo mkdir -p /mnt/labfs
+sudo mount /dev/sdX1 /mnt/labfs
+findmnt /mnt/labfs
+df -h /mnt/labfs
+sudo touch /mnt/labfs/testfile.txt
+ls -l /mnt/labfs
+sudo umount /mnt/labfs
+findmnt /mnt/labfs
+cat /etc/fstab
+sudo nano /etc/fstab
+sudo mount -a
+findmnt /mnt/labfs
+df -Th /mnt/labfs
+sudo blkid /dev/sdX1
+sudo umount /mnt/labfs
+sudo e2fsck -f /dev/sdX1
+sudo mount /dev/sdX1 /mnt/labfs
+findmnt /mnt/labfs
+df -h /mnt/labfs
+sudo nano /etc/fstab
+sudo umount /mnt/labfs
+sudo nano /etc/fstab
+findmnt /mnt/labfs
+lsblk -f
+df -Th
