@@ -1,0 +1,61 @@
+mkdir -p ~/lab6
+cd ~/lab6
+touch permissions.txt
+ls -l permissions.txt
+chmod u=rwx,g=rw,o=--- permissions.txt
+ls -l permissions.txt
+chmod 640 permissions.txt
+ls -l permissions.txt
+chmod 755 permissions.txt
+ls -l permissions.txt
+chmod u-x permissions.txt
+ls -l permissions.txt
+chmod g+rx permissions.txt
+ls -l permissions.txt
+chmod o= permissions.txt
+ls -l permissions.txt
+mkdir -p securedata
+chmod 750 securedata
+ls -ld securedata
+mkdir -p permission_demo
+touch permission_demo/sample.txt
+ls -ld permission_demo
+ls -l permission_demo/sample.txt
+cat permission_demo/sample.txt
+touch permission_demo/new.txt
+umask
+umask 027
+touch umask_file
+mkdir umask_dir
+ls -l umask_file
+ls -ld umask_dir
+umask 0022
+umask
+sudo groupadd aclgroup
+sudo useradd -m acluser
+sudo usermod -aG aclgroup acluser
+touch aclfile.txt
+getfacl aclfile.txt
+sudo setfacl -m u:acluser:rw- aclfile.txt
+getfacl aclfile.txt
+sudo setfacl -m g:aclgroup:r-- aclfile.txt
+getfacl aclfile.txt
+sudo setfacl -m u:acluser:r-- aclfile.txt
+getfacl aclfile.txt
+sudo setfacl -x u:acluser aclfile.txt
+getfacl aclfile.txt
+mkdir -p acl_directory
+sudo setfacl -m d:u:acluser:rwX acl_directory
+touch acl_directory/test.txt
+getfacl acl_directory
+getfacl acl_directory/test.txt
+touch workflow.txt
+chmod 640 workflow.txt
+umask 027
+sudo setfacl -m u:acluser:rw- workflow.txt
+ls -l workflow.txt
+getfacl workflow.txt
+sudo setfacl -b workflow.txt
+chmod 600 workflow.txt
+ls -l workflow.txt
+getfacl workflow.txt
