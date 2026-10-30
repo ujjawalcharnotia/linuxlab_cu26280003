@@ -1,0 +1,48 @@
+ps
+ps -ef
+ps aux
+ps -ef --forest
+top
+top
+htop
+sleep 300
+sleep 300 &
+jobs
+jobs
+sleep 300 &
+jobs
+sleep 300
+jobs
+bg %1
+jobs
+sleep 300 &
+jobs -l
+sleep 300 &
+jobs -l
+kill 2456
+ps -p 2456
+sleep 300 &
+jobs -l
+kill -TERM 2456
+sleep 300 &
+jobs -l
+kill -KILL 2456
+ps -p 2456
+sleep 300 &
+pkill -x sleep
+pgrep -a sleep
+sleep 300 &
+sleep 400 &
+ps -u "$USER"
+jobs -l
+jobs
+kill %1 %2
+jobs
+ps -u "$USER"
+sleep 300
+jobs -l
+bg %1
+jobs
+fg %1
+kill %1
+jobs
