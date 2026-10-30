@@ -1,0 +1,25 @@
+lsb_release -a
+sudo apt update
+sudo apt upgrade
+apt search nano
+apt show nano
+sudo apt install tree
+dpkg -l tree
+dpkg -s tree
+dpkg -L tree
+dpkg -S /usr/bin/tree
+sudo apt remove tree
+sudo apt purge tree
+sudo apt autoremove
+apt download tree
+dpkg -l
+grep " install " /var/log/dpkg.log
+sudo apt clean
+sudo apt autoclean
+sudo apt --fix-broken install
+sudo dpkg-reconfigure tzdata
+apt --version
+apt --help
+apt list --upgradable
+sudo dpkg --audit
+df -h
