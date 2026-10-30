@@ -1,0 +1,66 @@
+mkdir -p archive_lab
+cd archive_lab
+echo "Sample content 1" > file1.txt
+echo "Sample content 2" > file2.txt
+echo "Sample content 3" > file3.txt
+ls -l
+cd ..
+tar -cvf files.tar archive_lab
+ls -lh files.tar
+tar -tvf files.tar
+mkdir -p extracted_tar
+tar -xvf files.tar -C extracted_tar
+ls -R extracted_tar
+echo "Linux compression practice" > sample.txt
+gzip -k sample.txt
+ls -lh sample.txt sample.txt.gz
+gunzip -k sample.txt.gz
+ls -l sample.txt
+tar -czvf archive.tar.gz archive_lab
+ls -lh archive.tar.gz
+tar -tzvf archive.tar.gz
+mkdir -p extracted_gz
+tar -xzvf archive.tar.gz -C extracted_gz
+ls -R extracted_gz
+zip files.zip archive_lab/file1.txt archive_lab/file2.txt archive_lab/file3.txt
+ls -lh files.zip
+unzip -l files.zip
+mkdir -p extracted_zip
+unzip files.zip -d extracted_zip
+ls -R extracted_zip
+unzip files.zip archive_lab/file1.txt -d selected_file
+ls -R selected_file
+zip -r archive_directory.zip archive_lab
+unzip -l archive_directory.zip
+tar -cvf archive.tar archive_lab
+gzip -k archive.tar
+ls -lh archive.tar archive.tar.gz
+tar -cvf updated.tar archive_lab
+echo "New file content" > newfile.txt
+tar -rvf updated.tar newfile.txt
+tar -tvf updated.tar
+tar -cvf compare.tar archive_lab
+tar -czvf compare.tar.gz archive_lab
+tar -tvf compare.tar
+tar -tzvf compare.tar.gz
+ls -lh compare.tar compare.tar.gz
+mkdir -p final_tar final_zip
+tar -xzvf archive.tar.gz -C final_tar
+unzip files.zip -d final_zip
+ls -R final_tar
+ls -R final_zip
+tar -czvf backup.tar.gz archive_lab
+mkdir -p restored_backup
+tar -xzvf backup.tar.gz -C restored_backup
+ls -R restored_backup
+tar -cvf complete.tar archive_lab
+tar -tvf complete.tar
+gzip -k complete.tar
+ls -lh complete.tar.gz
+gunzip -k complete.tar.gz
+zip -r complete.zip archive_lab
+unzip -l complete.zip
+mkdir -p complete_extract
+unzip complete.zip -d complete_extract
+tar -xzvf archive.tar.gz -C complete_extract
+ls -R complete_extract
