@@ -1,0 +1,21 @@
+df -h
+df -Th
+du -sh ~
+du -h --max-depth=1 ~
+lsblk
+lsblk -f
+sudo fdisk -l
+mount
+findmnt
+free -h
+df -i
+du -sh /var/log
+du -sh /tmp
+sudo du -sh /var/*
+ls -lh
+stat /etc/passwd
+find ~ -type f -size +10M
+find ~ -type f -name "*.txt"
+sudo blkid
+cat /etc/fstab
+sync
